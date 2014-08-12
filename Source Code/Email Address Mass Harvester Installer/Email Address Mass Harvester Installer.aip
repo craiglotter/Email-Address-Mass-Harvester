@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT type="Advanced Installer" version="1.9" modules="professional" RootPath=".">
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="CTRLS" Value="3"/>
+    <ROW Property="ProductName" Value="Email Address Mass Harvester"/>
+    <ROW Property="ALLUSERS" Value="2"/>
+    <ROW Property="BannerBitmap" Value="installer_background.jpg"/>
+    <ROW Property="ProductVersion" Value="1.0.0"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
+    <ROW Property="UpgradeCode" Value="{1D85708B-4F4D-4026-A53F-A66E01160889}"/>
+    <ROW Property="ProductCode" Value="{BD6E4225-B7B0-4CC1-B09D-1A233C367788}"/>
+    <ROW Property="ARPPRODUCTICON" Value="controlPanelIcon.exe"/>
+    <ROW Property="DialogBitmap" Value="installer_background_dialog.jpg"/>
+    <ROW Property="Manufacturer" Value="CodeUnit"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="Inputs_DIR" Directory_Parent="TARGETDIR" DefaultDir="Inputs"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" Directory_Parent="" DefaultDir="SourceDir"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="Application_Loader.exe" ComponentId="{8EDD1975-BE1A-43E6-AD73-4D00E1F82D24}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="Application_Loader.exe" FullKeyPath="TARGETDIR\Application_Loader.exe"/>
+    <ROW Component="Distinct_and_Sorted_Text_Lines.exe" ComponentId="{2C4C98B0-41FD-4366-A2CF-B2AC651A255E}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="Distinct_and_Sorted_Text_Lines.exe" FullKeyPath="TARGETDIR\Distinct and Sorted Text Lines.exe"/>
+    <ROW Component="Email_Address_Harvester.exe" ComponentId="{5A9A65CA-260D-4B9E-A097-9EAE14AE2BDC}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="Email_Address_Harvester.exe" FullKeyPath="TARGETDIR\Email Address Harvester.exe"/>
+    <ROW Component="File_Delete_To_Recycle_Bin.exe" ComponentId="{83C80D82-EA0A-4D3B-B654-1682EDF0D5E5}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="File_Delete_To_Recycle_Bin.exe" FullKeyPath="TARGETDIR\File Delete To Recycle Bin.exe"/>
+    <ROW Component="config.ini" ComponentId="{FD32CB04-26FB-4955-9673-9AAA5B2AF2A7}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="config.ini" FullKeyPath="TARGETDIR"/>
+    <ROW Component="Email_Address_Mass_Harvester.exe" ComponentId="{998E068F-F927-45B6-B640-9B62119C3615}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="Email_Address_Mass_Harvester.exe" FullKeyPath="TARGETDIR\Email Address Mass Harvester.exe"/>
+    <ROW Component="Inputs.txt" ComponentId="{752C2B79-06B3-4D1C-969D-61372139232A}" Directory_="Inputs_DIR" Attributes="0" Condition="" KeyPath="Inputs.txt" FullKeyPath="TARGETDIR\Inputs"/>
+    <ROW Component="Text_File_Merger.exe" ComponentId="{1AE7673E-3541-40C5-851B-B2260388C98D}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="Text_File_Merger.exe" FullKeyPath="TARGETDIR\Text File Merger.exe"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Feature_Parent="" Title="MainFeature" Description="Description" Display="2" Level="1" Directory_="TARGETDIR" Attributes="0" Components="Application_Loader.exe config.ini Distinct_and_Sorted_Text_Lines.exe Email_Address_Harvester.exe Email_Address_Mass_Harvester.exe File_Delete_To_Recycle_Bin.exe Inputs.txt Text_File_Merger.exe"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="Email_Address_Harvester.exe" Component_="Email_Address_Harvester.exe" FileName="EmailA~1.exe|Email Address Harvester.exe" Version="" Language="" Attributes="" SourcePath="..\Email Address Mass Harvester\Required Files\Email Address Harvester.exe" SelfReg="false"/>
+    <ROW File="Splash_Image.jpg" Component_="Inputs.txt" FileName="Splash~1.jpg|Splash_Image.jpg" Version="" Language="" Attributes="" SourcePath="..\Email Address Mass Harvester\Required Files\Inputs\Splash_Image.jpg" SelfReg="false"/>
+    <ROW File="config.ini" Component_="config.ini" FileName="config.ini" Version="" Language="" Attributes="" SourcePath="..\Email Address Mass Harvester\Required Files\config.ini" SelfReg="false"/>
+    <ROW File="default_config.ini" Component_="config.ini" FileName="defaul~1.ini|default_config.ini" Version="" Language="" Attributes="" SourcePath="..\Email Address Mass Harvester\Required Files\default_config.ini" SelfReg="false"/>
+    <ROW File="Email_Address_Mass_Harvester.exe" Component_="Email_Address_Mass_Harvester.exe" FileName="EmailA~2.exe|Email Address Mass Harvester.exe" Version="" Language="" Attributes="" SourcePath="..\Email Address Mass Harvester\Required Files\Email Address Mass Harvester.exe" SelfReg="false"/>
+    <ROW File="Inputs.txt" Component_="Inputs.txt" FileName="Inputs.txt" Version="" Language="" Attributes="" SourcePath="..\Email Address Mass Harvester\Required Files\Inputs\Inputs.txt" SelfReg="false"/>
+    <ROW File="Text_File_Merger.exe" Component_="Text_File_Merger.exe" FileName="TextFi~1.exe|Text File Merger.exe" Version="" Language="" Attributes="" SourcePath="..\Email Address Mass Harvester\Required Files\Text File Merger.exe" SelfReg="false"/>
+    <ROW File="Application_Loader.exe" Component_="Application_Loader.exe" FileName="Applic~1.exe|Application_Loader.exe" Version="" Language="" Attributes="" SourcePath="..\Email Address Mass Harvester\Required Files\Application_Loader.exe" SelfReg="false"/>
+    <ROW File="Description.txt" Component_="config.ini" FileName="Descri~1.txt|Description.txt" Version="" Language="" Attributes="" SourcePath="..\Email Address Mass Harvester\Required Files\Description.txt" SelfReg="false"/>
+    <ROW File="Distinct_and_Sorted_Text_Lines.exe" Component_="Distinct_and_Sorted_Text_Lines.exe" FileName="Distin~1.exe|Distinct and Sorted Text Lines.exe" Version="" Language="" Attributes="" SourcePath="..\Email Address Mass Harvester\Required Files\Distinct and Sorted Text Lines.exe" SelfReg="false"/>
+    <ROW File="File_Delete_To_Recycle_Bin.exe" Component_="File_Delete_To_Recycle_Bin.exe" FileName="FileDe~1.exe|File Delete To Recycle Bin.exe" Version="" Language="" Attributes="" SourcePath="..\Email Address Mass Harvester\Required Files\File Delete To Recycle Bin.exe" SelfReg="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_DOWNGRADE" Type="19" Source="" Target="A higher version of [ProductName] is installed."/>
+    <ROW Action="AI_ViewReadme" Type="194" Source="viewer.exe" Target="[#Description.txt]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][Manufacturer]\[ProductName]"/>
+    <ROW Action="AI_LaunchApp" Type="194" Source="viewer.exe" Target="[#Application_Loader.exe]"/>
+    <ROW Action="SET_TARGETDIR" Type="307" Source="TARGETDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="UpgradeCode" VersionMin="" VersionMax="ProductVersion" Language="" Attributes="1025" Remove=""/>
+    <ROW UpgradeCode="UpgradeCode" VersionMin="ProductVersion" VersionMax="" Language="" Attributes="2" Remove=""/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiMergeModsComponent">
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="Email_Address_Mass_Harvester" Directory_="SHORTCUTDIR" Name="EmailA~1|Email Address Mass Harvester" Component_="Application_Loader.exe" Target="[TARGETDIR]Application_Loader.exe" Arguments="" Description="" Hotkey="0" Icon_="controlPanelIcon.exe" IconIndex="0" ShowCmd="1" WkDir=""/>
+    <ROW Shortcut="Uninstall_Email_Address_Mass_Harvester" Directory_="SHORTCUTDIR" Name="Uninst~1|Uninstall Email Address Mass Harvester" Component_="Application_Loader.exe" Target="[SystemFolder]msiexec.exe" Arguments="/x [ProductCode]" Description="" Hotkey="0" Icon_="SystemFolder_msiexec.exe" IconIndex="0" ShowCmd="1" WkDir=""/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="SystemFolder_msiexec.exe" SourcePath="&lt;uninstall.ico&gt;" Index="0"/>
+    <ROW Name="controlPanelIcon.exe" SourcePath="Images\Application_Icon.ico" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="installer_background.jpg" SourcePath="Images\installer_background.jpg"/>
+    <ROW Name="installer_background_dialog.jpg" SourcePath="Images\installer_background_dialog.jpg"/>
+    <ROW Name="viewer.exe" SourcePath="&lt;viewer.exe&gt;"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ATTRIBUTE name="Start" value="WelcomeDlg FolderDlg VerifyReadyDlg"/>
+    <ATTRIBUTE name="Progress" value="ProgressDlg"/>
+    <ATTRIBUTE name="End" value="ExitDialog"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.PreReqComponent">
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiMediaComponent">
+    <ATTRIBUTE name="InstallationType" value="1"/>
+    <ATTRIBUTE name="MediaSize" value="0"/>
+    <ATTRIBUTE name="Compress" value="1"/>
+    <ATTRIBUTE name="Package" value="10"/>
+    <ATTRIBUTE name="PackageName" value="Release\Email Address Mass Harvester Installer"/>
+    <ATTRIBUTE name="IconPath" value="Images\Application_Icon.ico?0"/>
+  </COMPONENT>
+</DOCUMENT>
